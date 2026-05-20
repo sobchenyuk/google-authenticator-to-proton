@@ -131,7 +131,7 @@ function printUsage(): void
 	echo "  php decode.php --url \"otpauth-migration://...\" [--out protonpass-export.csv] [--vault Personal]\n";
 	echo "  php decode.php --input migration-urls.txt [--out protonpass-export.csv] [--vault Personal]\n";
 	echo "\n";
-	echo "If neither --url nor --input is provided, a built-in sample URL is used.\n";
+	echo "If neither --url nor --input is provided, the script does nothing.\n";
 }
 
 function collectUrls(array $options): array

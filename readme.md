@@ -15,8 +15,6 @@ Run with a text file containing one migration URL per line:
 php decode.php --input migration-urls.txt --out protonpass-export.csv --vault Personal
 ```
 
-If no input is provided, the script uses the built-in sample URL in decode.php.
-
 ## Output
 
 The script writes a Proton Pass CSV with header:
@@ -29,7 +27,7 @@ Behavior:
 - Exports TOTP entries only.
 - Skips HOTP entries and reports skip counts.
 - Defaults algorithm to SHA1 and digits to 6 when unspecified.
-- Uses smart mapping: account names that are emails go to email, otherwise username.
+- Maps account name & emails: Account names that are emails go to email, otherwise username.
 
 ## Notes
 
