@@ -170,7 +170,7 @@ function decodeMigrationPayloadFromUrl(string $url): string
 		throw new RuntimeException('URL is missing the data query parameter.');
 	}
 
-	$base64 = urldecode($params['data']);
+	$base64 = (string)$params['data'];
 	$decoded = base64_decode($base64, true);
 	if ($decoded === false) {
 		throw new RuntimeException('data parameter is not valid base64.');
